@@ -1,0 +1,143 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: dimgray;
+  overflow-x: hidden;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  height: fit-content;
+  width: fit-content;
+}
+
+#container {
+  margin: 0 auto;
+  border: 5px solid lime;
+  height: 60vh;
+  width: 97vw;
+  background-color: black;
+  background-image: url('https://www.codebypete.com/pics/pharm2code_tilt.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  box-shadow: 0 0 5vmin 5vmin dimgray inset;
+}
+
+#PacMan {
+  position: absolute;
+  max-width: 20vmin;
+}
+
+.buttons {
+  display: flex;
+  height: 40vh;
+  width: 100vw;
+}
+
+.buttonsLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+
+.buttonsLeft>button {
+  margin: 1rem;
+}
+
+.buttonsMidRow {
+  display: flex;
+  gap: 5rem;
+}
+
+.buttonsRight {
+  margin: auto;
+}
+
+.buttonsRight>button {
+  margin: 1rem 1rem;
+}
+
+button {
+  width: fit-content;
+  height: fit-content;
+  font-size: 2rem;
+  min-width: 4rem;
+  min-height: 4rem;
+  border: 1px solid lime;
+  border-radius: 0.25rem;
+  background-color: black;
+  color: lime;
+  transition: all 0.25s ease-out;
+}
+
+@media (max-width: 400px) {
+  button {
+    font-size: 1rem;
+    min-width: 2rem;
+    min-height: 2rem;
+    margin: -1rem;
+  }
+}
+@media (max-height: 550px) {
+  button {
+    font-size: 1rem;
+    min-width: 2rem;
+    min-height: 2rem;
+    margin: -1rem;
+  }
+}
+
+button:hover,.hover {
+  background-color: lime;
+  border: 1px solid white;
+  color: white;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+  color: white;
+}
+
+footer>a, footer>p {
+  margin: auto 0;
+}
+
+footer>p>a>span {
+  font-style: italic;
+}
+footer>p>a {
+  text-decoration: none;
+}
+
+footer>p>a>img {
+  animation: slowSpin 5s ease-in-out infinite;
+  margin-bottom: -0.5rem;
+}
+
+@keyframes slowSpin {
+  0% { 
+      transform: scale(1); 
+  }
+  50% {
+      transform: scale(-1, 1);
+  }
+  100% { 
+      transform: scale(1); 
+  }
+}
+
+.socialLogo {
+  max-height: 1.5rem;
+  transition: transform 0.5s ease-in-out;
+}
+
+.socialLogo:hover {
+  transform: scale(-1, 1) scale(1);
+}
