@@ -16,15 +16,19 @@
 <style>
   *, *::after, *::before {
     box-sizing: border-box;
-}
+  }
+
   html {
     background-color: dimgray;
+    overflow: hidden;
   }
+
   body {
     height: fit-content;
     height: 100vh;
     width: 100vw;
   }
+
   #container {
     margin: 0 auto;
     border: 5px solid lime;
@@ -66,9 +70,9 @@
   }
 
   button {
-    font-size: 2rem;
     width: fit-content;
     height: fit-content;
+    font-size: 2rem;
     min-width: 4rem;
     min-height: 4rem;
     border: 1px solid lime;
@@ -77,11 +81,30 @@
     color: lime;
     transition: all 0.25s ease-out;
   }
+
+  @media (max-width: 350px) {
+    button{
+      font-size: 1rem;
+      min-width: 2rem;
+      min-height: 2rem;
+      margin: -1rem;
+    }
+  }
+  @media (max-height: 350px) {
+    button{
+      font-size: 1rem;
+      min-width: 2rem;
+      min-height: 2rem;
+      margin: -1rem;
+    }
+  }
+
   button:hover,.hover {
     background-color: lime;
     border: 1px solid white;
     color: white;
   }
+
 </style>
 
 <html>
