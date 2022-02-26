@@ -16,7 +16,7 @@ body {
 #container {
   margin: 0 auto;
   border: 5px solid lime;
-  height: 60vh;
+  height: 70vh;
   width: 97vw;
   background-color: black;
   background-image: url('https://www.codebypete.com/pics/pharm2code_tilt.jpg');
@@ -30,9 +30,34 @@ body {
   max-width: 20vmin;
 }
 
+@media (orientation: landscape) {
+  #container {
+    position: absolute;
+    width: 80vw;
+    height: 90vh;
+  }
+  .buttonsLeft {
+    position: absolute;
+    left: 85vw;
+    top: 25vh;
+  }
+  .buttonsRight {
+    position: absolute;
+    top: 70vh;
+    left: 83vw;
+  }
+  footer {
+    position: absolute;
+    bottom: 0;
+    left: 27vw;
+    display: flex;
+    flex-direction: row;
+  }
+}
+
 .buttons {
   display: flex;
-  height: 40vh;
+  height: 25vh;
   width: 100vw;
 }
 
@@ -61,33 +86,15 @@ body {
 }
 
 button {
-  width: fit-content;
-  height: fit-content;
-  font-size: 2rem;
-  min-width: 4rem;
-  min-height: 4rem;
+  font-size: 1rem;
+  min-width: 2rem;
+  min-height: 2rem;
+  margin: -1rem;
   border: 1px solid lime;
   border-radius: 0.25rem;
   background-color: black;
   color: lime;
   transition: all 0.25s ease-out;
-}
-
-@media (max-width: 400px) {
-  button {
-    font-size: 1rem;
-    min-width: 2rem;
-    min-height: 2rem;
-    margin: -1rem;
-  }
-}
-@media (max-height: 550px) {
-  button {
-    font-size: 1rem;
-    min-width: 2rem;
-    min-height: 2rem;
-    margin: -1rem;
-  }
 }
 
 button:hover,.hover {
@@ -97,6 +104,7 @@ button:hover,.hover {
 }
 
 footer {
+  height: 5vh;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -136,6 +144,7 @@ footer>p>a>img {
 .socialLogo {
   max-height: 1.5rem;
   transition: transform 0.5s ease-in-out;
+  margin-bottom: -0.5rem;
 }
 
 .socialLogo:hover {
