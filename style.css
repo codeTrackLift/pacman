@@ -27,7 +27,36 @@ body {
 
 #PacMan {
   position: absolute;
-  max-width: 20vmin;
+  max-width: 10vmin;
+}
+
+#ball {
+  z-index: 5;
+  position: absolute;
+  left: 200px;
+  top: 200px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: transparent;
+}
+
+#scoreBoard {
+  background-color: black;
+  height: 2rem;
+  width: fit-content;
+  padding: 1rem;
+  color: lime;
+  border: 1px solid lime;
+  border-radius: 0.25rem;
+  margin: auto auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#scoreNumber {
+  padding-left: 0.5rem;
 }
 
 @media (orientation: landscape) {
@@ -40,6 +69,11 @@ body {
     position: absolute;
     left: 85vw;
     top: 25vh;
+  }
+  #scoreBoard {
+    position: absolute;
+    left: 84vw;
+    top: 10vh;
   }
   .buttonsRight {
     position: absolute;
@@ -101,6 +135,30 @@ button:hover,.hover {
   background-color: lime;
   border: 1px solid white;
   color: white;
+}
+
+/* Shake animation */
+#container.shake {
+  animation: shake 0.5s linear 1;
+}
+@keyframes shake {
+  10%,
+  90% {
+      transform: translate3d(-1px, 0, 0);
+  }
+  20%,
+  80% {
+      transform: translate3d(2px, 0, 0);
+  }
+  30%,
+  50%,
+  70% {
+      transform: translate3d(-4px, 0, 0);
+  }
+  40%,
+  60% {
+      transform: translate3d(4px, 0, 0);
+  }
 }
 
 footer {
