@@ -20,13 +20,11 @@
 
   html {
     background-color: dimgray;
-    overflow: hidden;
   }
 
   body {
     height: fit-content;
-    height: 100vh;
-    width: 100vw;
+    width: fit-content;
   }
 
   #container {
@@ -272,7 +270,7 @@
     if(event.code.includes('KeyR')) {
       event.preventDefault();
       buttonReload.classList.add('hover');
-      setTimeout(windowReload, 250);
+      setTimeout(windowReload, 500);
     }
   }
 
