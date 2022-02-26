@@ -155,7 +155,5 @@ buttonDown.classList.remove('hover');
 })
 
 window.onorientationchange = function(event) {
-  container = document.getElementById('container').getBoundingClientRect();
-  limitX = container.width;
-  limitY = container.height;
+  windowReload();
 };
