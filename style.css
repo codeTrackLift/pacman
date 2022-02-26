@@ -86,6 +86,12 @@ body {
     left: 27vw;
     display: flex;
     flex-direction: row;
+    margin: 0 auto;
+  }
+  @media (min-width: 1200px) {
+    footer {
+      left: 40vw;
+    }
   }
 }
 
@@ -112,7 +118,7 @@ body {
 }
 
 .buttonsRight {
-  margin: auto;
+  margin: 1rem auto;
 }
 
 .buttonsRight>button {
