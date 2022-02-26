@@ -13,9 +13,9 @@ var speedX = 0;
 var speedY = 0;
 var focus = 0;
 var picIndex = 2;
-const container = document.getElementById('container').getBoundingClientRect();
-const limitX = container.width;
-const limitY = container.height;
+var container = document.getElementById('container').getBoundingClientRect();
+var limitX = container.width;
+var limitY = container.height;
 
 
 // Button input response
@@ -153,3 +153,9 @@ buttonRight.classList.remove('hover');
 buttonUp.classList.remove('hover');
 buttonDown.classList.remove('hover');
 })
+
+window.onorientationchange = function(event) {
+  container = document.getElementById('container').getBoundingClientRect();
+  limitX = container.width;
+  limitY = container.height;
+};
