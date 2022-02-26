@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name='description' content='codeByPete Pac Man Project'>
+
+    <!-- My CSS & JS -->
+    <link rel="shortcut icon" type='image/x-icon' href="./pacman_icon.ico">
+
+    <title>Pac Man Project</title>
+  </head>
+
+<style>
+  *, *::after, *::before {
+    box-sizing: border-box;
+}
+  html {
+    background-color: dimgray;
+  }
+  body {
+    height: fit-content;
+    height: 100vh;
+    width: 100vw;
+  }
+  #container {
+    margin: 0 auto;
+    border: 5px solid lime;
+    height: 60vh;
+    width: 97vw;
+    background-color: black;
+    background-image: url('https://www.codebypete.com/pics/pharm2code_tilt.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    box-shadow: 0 0 5vmin 5vmin dimgray inset;
+  }
+  #PacMan {
+    position: absolute;
+    max-width: 20vmin;
+  }
+  .buttons {
+    display: flex;
+    height: 40vh;
+    width: 100vw;
+  }
+  .buttonsLeft {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+  }
+  .buttonsLeft>button {
+    margin: 1rem;
+  }
+  .buttonsLeft>.buttonsMidRow {
+    display: flex;
+    gap: 5rem;
+  }
+  .buttonsRight {
+    margin: auto;
+  }
+  .buttonsRight>button {
+    margin: 1rem 1rem;
+  }
+
+  button {
+    font-size: 2rem;
+    width: fit-content;
+    height: fit-content;
+    min-width: 4rem;
+    min-height: 4rem;
+    border: 1px solid lime;
+    border-radius: 0.25rem;
+    background-color: black;
+    color: lime;
+    transition: all 0.25s ease-out;
+  }
+  button:hover,.hover {
+    background-color: lime;
+    border: 1px solid white;
+    color: white;
+  }
+</style>
+
+<html>
+
+  <body>
+
+    <div id='container'>
+      <img id="PacMan" src="PacMan1.png">
+    </div>
+
+    <div class="buttons">
+      <div class="buttonsLeft">
+        <button id='buttonUp' onclick="input('up')">&#8593;</button>
+        <div class="buttonsMidRow">
+          <button id='buttonLeft' onclick="input('left')">&#8592;</button>
+          <button id='buttonRight' onclick="input('right')">&#8594;</button>
+        </div>
+        <button id='buttonDown' onclick="input('down')">&#8595;</button>
+      </div>
+      <div class="buttonsRight">
+        <button id='buttonReload' onclick="window.location.reload()">Reload</button>
+      </div>
+    </div>
+
+  </body>
+
+<script>
+
+  // Global Variables for game
+  const pacArray = [
+    ['PacMan1.png', 'PacMan2.png'],
+    ['PacMan3.png', 'PacMan4.png'],
+    ['PacManDownOpen.png', 'PacManDownClosed.png'],
+    ['PacManUpOpen.png', 'PacManUpClosed.png']
+  ];
+  var runStatus = false;
+  var posX = 0;
+  var posY = 0;
+  var direction = 'left';
+  var speedX = 0;
+  var speedY = 0;
+  var focus = 0;
+  var picIndex = 2;
+  const container = document.getElementById('container').getBoundingClientRect();
+  const limitX = container.width;
+  const limitY = container.height;
+
+
+  // Button input response
+  function input(input) {
+    switch (input) {
+      case 'left':
+        speedX = 10;
+        speedY = 0;
+        direction = input;
+        picIndex = 1;
+        break;
+      case 'right':
+        speedX = 10;
+        speedY = 0;
+        direction = input;
+        picIndex = 0;
+        break;
+      case 'up':
+        speedX = 0;
+        speedY = 10;
+        direction = input;
+        picIndex = 3;
+        break;
+      case 'down':
+        speedX = 0;
+        speedY = 10;
+        direction = input;
+        picIndex = 2;
+        break;
+    }
+    if(!runStatus) {
+      runStatus = !runStatus;
+      setInterval(Run, 50);
+    }
+  }
+
+  // Moves images by changing image css style position
+  function move() {
+    const img = document.getElementById("PacMan");
+    const imgWidth = img.width;
+    switch (direction) {
+      case 'left':
+        checkLimits(direction, imgWidth, posX, limitX);
+        posX -= speedX;
+        img.style.left = posX + "px";
+        break;
+      case 'right':
+        checkLimits(direction, imgWidth, posX, limitX);
+        posX += speedX;
+        img.style.left = posX + 'px';
+        break;
+      case 'up':
+        checkLimits(direction, imgWidth, posY, limitY);
+        posY -= speedY;
+        img.style.top = posY + "px";
+        break;
+      case 'down':
+        checkLimits(direction, imgWidth, posY, limitY);
+        posY += speedY;
+        img.style.top = posY + 'px';
+        break;
+    }
+  }
+
+  // Checks limits and adjusts direction by changing inputs
+  function checkLimits(direction, imgWidth, pos, limit2d) {
+    if (direction === 'left' || direction === 'right') {
+      if (pos + imgWidth * 1.05 > limit2d) {
+        input('left');
+      } else if (pos < imgWidth * 0.25) {
+        input('right');
+      }
+    }
+    if (direction === 'up' || direction === 'down') {
+      if(pos + imgWidth * 1.05 > limit2d) {
+        input('up');
+      } else if (pos < imgWidth * 0.25) {
+        input('down');
+      }
+    }
+  }
+
+  // Calls the move function and 'focus' alternates between images
+  function Run() {
+    const img = document.getElementById("PacMan");
+    focus = (focus + 1) % 2; // Alternates 0 & 1
+    img.src = pacArray[picIndex][focus];
+    move();
+  }
+
+  // Keybind variables
+  const buttonReload = document.getElementById('buttonReload');
+  const buttonLeft = document.getElementById('buttonLeft');
+  const buttonRight = document.getElementById('buttonRight');
+  const buttonUp = document.getElementById('buttonUp');
+  const buttonDown = document.getElementById('buttonDown');
+
+  function keyPress(event) {
+    if(event.key.includes('ArrowLeft')) {
+      event.preventDefault();
+      buttonLeft.classList.add('hover');
+      input('left');
+    }
+    if(event.key.includes('ArrowRight')) {
+      event.preventDefault();
+      buttonRight.classList.add('hover');
+      input('right');
+    }
+    if(event.key.includes('ArrowUp')) {
+      event.preventDefault();
+      buttonUp.classList.add('hover');
+      input('up');
+    }
+    if(event.key.includes('ArrowDown')) {
+      event.preventDefault();
+      buttonDown.classList.add('hover');
+      input('down');
+    }
+    if(event.code.includes('KeyR')) {
+      event.preventDefault();
+      buttonReload.classList.add('hover');
+      setTimeout(windowReload, 250);
+    }
+  }
+
+  function windowReload() {
+    window.location.reload();
+  }
+
+  window.addEventListener('keydown', keyPress);
+  document.body.addEventListener('keyup', (e) => {
+    buttonReload.classList.remove('hover');
+    buttonLeft.classList.remove('hover');
+    buttonRight.classList.remove('hover');
+    buttonUp.classList.remove('hover');
+    buttonDown.classList.remove('hover');
+  })
+
+
+</script>
+
+
+
+</html>
