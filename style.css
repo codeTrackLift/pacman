@@ -68,12 +68,12 @@ body {
   .buttonsLeft {
     position: absolute;
     left: 85vw;
-    top: 25vh;
+    top: 15vh;
   }
   #scoreBoard {
     position: absolute;
-    left: 84vw;
-    top: 10vh;
+    left: 0vw;
+    top: -10vh;
   }
   .buttonsRight {
     position: absolute;
