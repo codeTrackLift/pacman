@@ -1,9 +1,9 @@
 // Global Variables: Pac-Man
 const pacArray = [
-  ['../pics/PacMan1.png', '../pics/PacMan2.png'],
-  ['../pics/PacMan3.png', '../pics/PacMan4.png'],
-  ['../pics/PacManDownOpen.png', '../pics/PacManDownClosed.png'],
-  ['../pics/PacManUpOpen.png', '../pics/PacManUpClosed.png']
+  ['PacMan1.png', 'PacMan2.png'],
+  ['PacMan3.png', 'PacMan4.png'],
+  ['PacManDownOpen.png', 'PacManDownClosed.png'],
+  ['PacManUpOpen.png', 'PacManUpClosed.png']
 ];
 var picIndex = 2;
 var posX = 0;
