@@ -77,7 +77,7 @@ body {
   }
   .buttonsRight {
     position: absolute;
-    top: 70vh;
+    top: 50vh;
     left: 84vw;
   }
   footer {
@@ -87,6 +87,7 @@ body {
     display: flex;
     flex-direction: row;
     margin: 0 auto;
+    padding-bottom: 2.5rem;
   }
   @media (min-width: 1200px) {
     footer {
