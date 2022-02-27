@@ -76,17 +76,19 @@ a:visited {
   height: 20px;
   border-radius: 50%;
   background: transparent;
+  transition: background 0.5s ease-in-out;
 }
 
 #scoreBoard {
   height: 2rem;
   width: fit-content;
   color: white;
+  font-family: Menlo Regular;
   margin: auto auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
 #scoreNumber {

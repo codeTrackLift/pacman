@@ -1,4 +1,12 @@
 # pacman
+
+Hello!
+
+Thank you for visiting my Pac-Man Project.  This was completed during my MIT xPro Full Stack Coding Bootcamp.  The original project starter files were provided by MIT xPro, the MIT License is included below.
+
+Best Regards,
+-Pete
+
 Pac Man Project - MIT xPro Full Stack Coding Bootcamp
 
 MIT License
