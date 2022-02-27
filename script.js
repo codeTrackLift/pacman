@@ -5,7 +5,7 @@ const pacArray = [
   ['PacManDownOpen.png', 'PacManDownClosed.png'],
   ['PacManUpOpen.png', 'PacManUpClosed.png']
 ];
-const pillArray = ['rotate(-10deg)', 'rotate(10deg)'];
+// const pillArray = ['rotate(-10deg)', 'rotate(10deg)'];
 var focusPill = 0;
 var runStatus = false;
 var posX = 0;
@@ -221,9 +221,9 @@ const moveBall2D = () => {
   positionY += velocityY;
   ball.style.left = positionX + 'px';
   ball.style.top = positionY + 'px';
-  const pill = document.getElementById("ball");
-  focusPill = (focusPill + 1) % 2; // Alternates 0 & 1
-  ball.style.transform = pillArray[focusPill];
+  // const pill = document.getElementById("ball");
+  // focusPill = (focusPill + 1) % 2; // Alternates 0 & 1
+  // ball.style.transform = pillArray[focusPill];
 }
 
 // Random color function using arrow syntax
