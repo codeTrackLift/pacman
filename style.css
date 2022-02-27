@@ -73,7 +73,7 @@ body {
   #scoreBoard {
     position: absolute;
     left: 0vw;
-    top: -10vh;
+    top: 15vh;
   }
   .buttonsRight {
     position: absolute;
@@ -87,7 +87,7 @@ body {
     display: flex;
     flex-direction: row;
     margin: 0 auto;
-    padding-bottom: 2.5rem;
+    padding-bottom: 2rem;
   }
   @media (min-width: 1200px) {
     footer {
