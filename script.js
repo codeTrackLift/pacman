@@ -19,6 +19,7 @@ var container = document.getElementById('container');
 var containerSize = document.getElementById('container').getBoundingClientRect();
 var limitX = containerSize.width;
 var limitY = containerSize.height;
+const welcomeMessage = document.getElementById('welcomeMessage');
 
 
 // Button input response
@@ -51,6 +52,7 @@ function input(input) {
   }
   if (!runStatus) {
     runStatus = !runStatus;
+    welcomeMessage.style.opacity = 0;
     setInterval(Run, 50);
     setInterval(moveBall2D, speed);
   }
@@ -101,13 +103,9 @@ function checkCollision(imgWidth) {
       },
       { once: true }
       );
-      setTimeout(scoreIncrease, 250);
+      score++;
       setTimeout(respawnBall, 1000);
     }
-}
-
-function scoreIncrease() {
-  score++;
 }
 
 // Checks limits and adjusts direction by changing inputs
@@ -234,7 +232,7 @@ const randomColor = () => {
   var color = 'rgb(' + r + ', ' + g + ', ' + b + ')';
   ball.style.background = color;
 }
-// setInterval(randomColor, 500); 
+setInterval(randomColor, 500); 
 
 function getRandom(scale) {
   return Math.floor(Math.random() * scale);
