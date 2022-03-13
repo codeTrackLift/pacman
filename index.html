@@ -1,69 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <meta name='description' content='codeByPete Pac-Man Mini-Game'>
 
     <!-- Font CSS Links -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
     <!-- My CSS & JS -->
     <link rel="stylesheet" href="./style.css">
     <link rel="shortcut icon" type='image/x-icon' href="./pics/pacman_icon.ico">
 
     <title>Pac-Man Mini-Game</title>
-  </head>
+</head>
 
-  <body>
+<body>
 
     <div id='container'>
-      <img id="PacMan" src="./pics/PacMan1.png" alt="Pac-Man image.">
-      <img id="ball"
-      src='./pics/pharma2code_icon.gif' alt="Ball image.">
-      <div id="welcomeMessage">
-        <h2 id="welcomeLine">Welcome to my Pac-Man Mini-Game!</h2>
-        <h3>This was coded during my #100DaysOfCode and started as my Week 3 Full Stack Coding Bootcamp Project.</h3>
-        <h2>Use Arrow Keys or Buttons to Play</h2>
-      </div>
+        <img id="PacMan" src="./pics/PacMan1.png" alt="Pac-Man image.">
+        <img id="ball" src='./pics/pharma2code_icon.gif' alt="Ball image.">
+        <div id="welcomeMessage">
+            <h2 id="welcomeLine">Welcome to my Pac-Man Mini-Game!</h2>
+            <h3>This was coded during my #100DaysOfCode and started as my Week 3 Full Stack Coding Bootcamp Project.
+            </h3>
+            <h2>Use Arrow Keys or Buttons to Play</h2>
+        </div>
     </div>
 
     <div class="buttons">
-      <div class="buttonsLeft">
-        <button id='buttonUp' onclick="input('up')">&#8593;</button>
-        <div class="buttonsMidRow">
-          <button id='buttonLeft' onclick="input('left')">&#8592;</button>
-          <button id='buttonRight' onclick="input('right')">&#8594;</button>
+        <div class="buttonsLeft">
+            <button id='buttonUp' onclick="input('up')">&#8593;</button>
+            <div class="buttonsMidRow">
+                <button id='buttonLeft' onclick="input('left')">&#8592;</button>
+                <button id='buttonRight' onclick="input('right')">&#8594;</button>
+            </div>
+            <button id='buttonDown' onclick="input('down')">&#8595;</button>
         </div>
-        <button id='buttonDown' onclick="input('down')">&#8595;</button>
-      </div>
-      <div class="buttonsRight">
-        <div id="scoreBoard">Score:<span id="scoreNumber">0</span></div>
-        <button id='buttonReload' onclick="window.location.reload()">Reload</button>
-      </div>
+        <div class="buttonsRight">
+            <div id="scoreBoard">Score:<span id="scoreNumber">0</span></div>
+            <button id='buttonReload' onclick="window.location.reload()">Reload</button>
+        </div>
     </div>
 
-  </body>
+</body>
 
-  <footer>
-    <p>Copyright © 
+<footer>
+    <p>Copyright ©
         <script>
             document.write(new Date().getFullYear())
-        </script> 
+        </script>
         <a href="https://www.codebypete.com">
-        <img src="./pics/pharma2code_icon.gif" style='height:2rem;' alt="codeByPete Logo.">
-        <span style="color:white;">code</span><span style="color:#00857c;">By</span><span style="color:lime;">Pete</span>
+            <img src="./pics/pharma2code_icon.gif" style='height:2rem;' alt="codeByPete Logo.">
+            <span style="color:white;">code</span><span style="color:#00857c;">By</span><span
+                style="color:lime;">Pete</span>
         </a>
     </p>
-    <a href="https://github.com/codetracklift" target="_blank"><img class="socialLogo" src="./pics/GitHub-Mark-Light-64px.png" alt="GitHub Icon"></a>
-    <a href="https://twitter.com/codetracklift" target="_blank"><img class="socialLogo" src="./pics/Twitter_social_icons-circle-white.png" alt="Twitter Icon"></a>
-    <a href="https://www.linkedin.com/in/codebypete/" target="_blank"><img class="socialLogo" src="./pics/linkedin_white.png" alt="LinkedIn Icon"></a>
+    <a href="https://github.com/codetracklift" target="_blank"><img class="socialLogo"
+            src="./pics/GitHub-Mark-Light-64px.png" alt="GitHub Icon"></a>
+    <a href="https://twitter.com/codetracklift" target="_blank"><img class="socialLogo"
+            src="./pics/Twitter_social_icons-circle-white.png" alt="Twitter Icon"></a>
+    <a href="https://www.linkedin.com/in/codebypete/" target="_blank"><img class="socialLogo"
+            src="./pics/linkedin_white.png" alt="LinkedIn Icon"></a>
 </footer>
 
-  <script src="./main.js"></script>
+<script src="./main.js"></script>
 
 </html>

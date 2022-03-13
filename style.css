@@ -56,7 +56,6 @@ a:visited {
   width: 97vw;
   background-color: black;
   background-image: url('./pics/vesselCode_tilt_part.jpg');
-  /* background-image: url('https://www.codebypete.com/pics/vesselCode_tilt_part.jpg'); */
   background-size: cover;
   background-attachment: local;
   box-shadow: 0px 0px 5vmin 5vmin dimgray inset;
@@ -136,7 +135,7 @@ a:visited {
 .buttons {
   display: flex;
   height: 25vh;
-  width: 100vw;
+  width: 95vw;
   margin: -0.5rem auto;
 }
 
