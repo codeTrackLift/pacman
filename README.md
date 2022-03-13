@@ -6,7 +6,7 @@
 <ol>
     <li>Languages: HTML, CSS, JavaScript</li>
     <li>DOM Manipulation</li>
-    <li>JavaScript Objects and Arrays</li>
+    <li>Key press and event listeners</li>
     <li>CSS Animations</li>
 </ol>
 
