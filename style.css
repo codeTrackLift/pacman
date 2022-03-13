@@ -98,23 +98,26 @@ a:visited {
 @media (orientation: landscape) {
   #container {
     position: absolute;
-    width: 80vw;
+    width: 75vw;
     height: 80vh;
+  }
+  .buttons {
+      width: fit-content;
   }
   .buttonsLeft {
     position: absolute;
-    left: 85vw;
+    left: 80vw;
     top: 15vh;
   }
   #scoreBoard {
     position: absolute;
-    left: -1.5vw;
+    left: 0vw;
     top: 15vh;
   }
   .buttonsRight {
     position: absolute;
     top: 50vh;
-    left: 84vw;
+    left: 78vw;
   }
   footer {
     position: fixed;
