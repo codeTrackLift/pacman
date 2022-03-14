@@ -1,6 +1,6 @@
-# <img src='https://www.codebypete.com/pics/about/mitxPro_logoStacked.jpg' alt='MIT xPro logo' width='30'> Full Stack Bootcamp: Pac-Man Mini-Game 
+# <img src='https://www.codebypete.com/pics/pacman/pacmanMiniGame.gif' width='40'> <img src='https://www.codebypete.com/pics/about/mitxPro_logoStacked.jpg' alt='MIT xPro logo' width='30'> Full Stack Bootcamp: Pac-Man Mini-Game <img src='https://www.codebypete.com/pics/pacman/pacman_icon.png' width='30'>
 
-<img src='https://www.codebypete.com/pics/pacman/pacman_icon.png' width='30'> ***Try Demo:*** [https://codetracklift.github.io/pacman <img src='https://www.codebypete.com/pics/pacman/pacman_minigame.png' width='30'>](https://codetracklift.github.io/pacman/)
+ ***Try Demo:*** [https://codetracklift.github.io/pacman](https://codetracklift.github.io/pacman)
 
 >**Skills Utilized**:
 <ol>
