@@ -1,4 +1,4 @@
-# <img src='https://www.codebypete.com/pics/pacman/pacmanMiniGame.gif' width='40'> <img src='https://www.codebypete.com/pics/about/mitxPro_logoStacked.jpg' alt='MIT xPro logo' width='30'> Full Stack Bootcamp: Pac-Man Mini-Game <img src='https://www.codebypete.com/pics/pacman/pacman_icon.png' width='30'>
+# <img src='https://www.codebypete.com/pics/pacman/pacmanMiniGame.gif' width='40'> <img src='https://www.codebypete.com/pics/about/mitxPro_logoStacked.jpg' alt='MIT xPro logo' width='30'> Full Stack Bootcamp: PacMan Mini-Game <img src='https://www.codebypete.com/pics/pacman/pacman_icon.png' width='30'>
 
  ***Try Demo:*** [https://codetracklift.github.io/pacman](https://codetracklift.github.io/pacman)
 
@@ -35,7 +35,7 @@ This was developed during Bootcamp Week 3 and started as a 'PacMan Movement Exer
 
 >Notes:
 - Blog Article on the '[Magic Ball](https://www.codebypete.com/pages/blog.html#blog2)' challenge.
-- Blog Article on the [Pac-Man Mini-Game](https://www.codebypete.com/pages/blog.html#blog3).
+- Blog Article on the [PacMan Mini-Game](https://www.codebypete.com/pages/blog.html#blog3).
 ## How to Run
 This mini-game accepts mouse, keyboard, and mobile inputs. 
 
