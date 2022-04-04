@@ -7,7 +7,7 @@
     <li>Languages: HTML, CSS, JavaScript</li>
     <li>DOM Manipulation</li>
     <li>Key Press and Event Listeners</li>
-    <li>CSS Animations</li>
+    <li>CSS Effects</li>
 </ol>
 
 ## About
