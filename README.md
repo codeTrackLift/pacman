@@ -1,4 +1,4 @@
-# <img src='https://www.codebypete.com/pics/pacman/pacmanMiniGame.gif' width='40'> <img src='https://www.codebypete.com/pics/about/mitxPro_logoStacked.jpg' alt='MIT xPro logo' width='30'> Full Stack Bootcamp: PacMan Mini-Game <img src='https://www.codebypete.com/pics/pacman/pacman_icon.png' width='30'>
+# <img src='./pics/pacmanMiniGame.gif' width='40'> <img src='https://codetracklift.github.io/codeTrackLift/logos/mitxPro_logoStacked.jpg' alt='MIT xPro logo' width='30'> Full Stack Bootcamp: PacMan Mini-Game <img src='./pics/pacman_icon.ico' width='30'>
 
  ***Try Demo:*** [https://codetracklift.github.io/pacman](https://codetracklift.github.io/pacman)
 
@@ -58,7 +58,7 @@ This mini-game accepts mouse, keyboard, and mobile inputs.
 
 ## MIT License
 
-Copyright (c) 2022 Pete Chu <img src='https://www.codebypete.com/pics/pharma2code_icon.gif' alt='codeByPete logo' width='25'> ***[codeByPete](https://www.codebypete.com/)***
+Copyright (c) 2022 Pete Chu <img src='https://codetracklift.github.io/codeTrackLift/logos/pharma2code_icon.gif' alt='codeByPete logo' width='25'> ***[codeByPete](https://www.codebypete.com/)***
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
