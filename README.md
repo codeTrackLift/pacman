@@ -1,4 +1,4 @@
-# <img src='./pics/pacmanMiniGame.gif' width='40'> <img src='https://codetracklift.github.io/codeTrackLift/logos/mitxPro_logoStacked.jpg' alt='MIT xPro logo' width='30'> Full Stack Bootcamp: PacMan Mini-Game <img src='./pics/pacman_icon.ico' width='30'>
+# <img src='./pics/pacmanMiniGame.gif' width='40'> <img src='https://codetracklift.github.io/codeTrackLift/logos/mitxPro_logoStacked.jpg' alt='MIT xPro logo' width='30'> PacMan Mini-Game <img src='./pics/pacman_icon.ico' width='30'>
 
  ***Try Demo:*** [https://codetracklift.github.io/pacman](https://codetracklift.github.io/pacman)
 
@@ -7,7 +7,7 @@
     <li>Languages: HTML, CSS, JavaScript</li>
     <li>DOM Manipulation</li>
     <li>Key Press and Event Listeners</li>
-    <li>CSS Effects</li>
+    <li>Custom CSS Effects</li>
 </ol>
 
 ## About
